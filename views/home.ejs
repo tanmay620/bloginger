@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Homepage</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    
+    <div class="container-fluid mt-3 ms-3">
+        <% blogs.forEach(blog => { %>
+            <div class="card" style="width: 18rem;">
+                <img <%= src="blog.coverImageUrl" %> class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= blog.title %></h5>
+                  <a href="" class="btn btn-primary">open</a>
+                </div>
+              </div>
+        <% }) %>
+    </div>
+
+    <%- include('./partials/script') %>
+</body>
+
+</html>
